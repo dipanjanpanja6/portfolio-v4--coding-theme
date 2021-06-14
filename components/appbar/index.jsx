@@ -2,6 +2,7 @@ import { AppBar, Dialog, DialogContent, Grid, IconButton, makeStyles, Slide, Too
 import { Close, GitHub, LinkedIn, MoreVert } from "@material-ui/icons"
 import React, { useState, forwardRef } from "react"
 import ActiveLink from "./activeLink"
+import Link from "../link"
 
 const TransitionLeft = forwardRef(function Transition(props, ref) {
   return <Slide direction="left" ref={ref} {...props} />
@@ -16,7 +17,7 @@ function Appbar() {
         <Toolbar>
           <div className={classes.bg} />
 
-          <Grid container justify="space-between" className={classes.appbar}>
+          <Grid container justify="space-between" alignItems="center" className={classes.appbar}>
             <ActiveLink header href="/"></ActiveLink>
 
             <Grid className={classes.nav} component="nav">
@@ -25,11 +26,11 @@ function Appbar() {
               <ActiveLink href="/about">.about()</ActiveLink>
               <ActiveLink href="/contact">.contact()</ActiveLink>
 
-              <IconButton>
+              <IconButton component={Link} target="_blank" href="https://linkedin.com/in/dipanjanpanja6">
                 <LinkedIn />
               </IconButton>
 
-              <IconButton>
+              <IconButton component={Link} target="_blank" href="https://github.com/dipanjanpanja6">
                 <GitHub />
               </IconButton>
             </Grid>
@@ -62,11 +63,11 @@ function Appbar() {
                     .contact()
                   </ActiveLink>
                   <div>
-                    <IconButton>
+                    <IconButton component={Link} target="_blank" href="https://linkedin.com/in/dipanjanpanja6">
                       <LinkedIn />
                     </IconButton>
 
-                    <IconButton>
+                    <IconButton component={Link} target="_blank" href="https://github.com/dipanjanpanja6">
                       <GitHub />
                     </IconButton>
                   </div>
@@ -119,10 +120,6 @@ const useStyles = makeStyles(theme => ({
   },
   dialogScrollBody: {
     textAlign: "end",
-    // left: "auto !important",
-    // right: "0 !important",
-    // top: "0 !important",
-    // bottom: "0 !important",
   },
 
   dialogPaper: {

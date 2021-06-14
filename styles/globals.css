@@ -25,3 +25,32 @@ li {
   font-size: 1rem;
   line-height: 1.5em;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-track {
+  background: #6161613d;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkitboxshadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: #525252;
+}
+
+marquee {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}

@@ -20,7 +20,7 @@ export const useGlobalStyle = makeStyles(theme => ({
     flexFlow: "column nowrap",
     alignItems: "flex-start",
     justifyContent: "center",
-    height: `100vh`,
+    minHeight: `100vh`,
     perspective: 900,
     perspectiveOrigin: "50% 50vh",
     [theme.breakpoints.down("sm")]: {
@@ -44,7 +44,20 @@ export const useGlobalStyle = makeStyles(theme => ({
     "& >span": {
       color: theme.palette.secondary.main,
       fontWeight: 300,
+      transition: ".8s",
       letterSpacing: "-2px",
+      "&:hover": {
+        color: theme.palette.secondary.dark,
+      },
+    },
+  },
+  subtitle: {
+    fontWeight: "bold",
+    paddingBottom: "1rem",
+    [theme.breakpoints.down("sm")]: {
+      ...theme.typography.body1,
+      // fontSize: "1.1rem",
+      // fontWeight: "normal",
     },
   },
   gap: {

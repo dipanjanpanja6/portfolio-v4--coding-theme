@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
         <Head>
           {/* <link rel="manifest" href="/favicon/manifest.json" /> */}
           {/* <link rel="preconnect" href="https://fonts.gstatic.com" /> */}
-          <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,500,700,700i|Montserrat:700" rel="stylesheet"></link>
+          <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,500,700,700i|Montserrat:700&display=swap" rel="stylesheet"></link>
         </Head>
         <body>
           <Main />
