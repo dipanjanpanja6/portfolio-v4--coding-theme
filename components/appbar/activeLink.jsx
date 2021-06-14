@@ -19,16 +19,35 @@ function ActiveLink({ children, href, header, mobile, ...props }) {
 
   if (header) {
     return (
-      <Typography variant="h6" component="a" href={href} onClick={() => router.push("/")} style={{ color: "#69e2ff", fontWeight: "400" }}>
+      <Typography
+        variant="h6"
+        component={motion.h1}
+        layoutId="page_title"
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        /*onClick={() => router.push("/")}*/ style={{ color: "#69e2ff", fontWeight: "400" }}>
         {router.asPath.substr(1) == "" ? ".init()" : `.${router.asPath.substr(1)}()`}
       </Typography>
     )
-  } else {
+  } else if (router.asPath !== href) {
     return (
-      <Typography component={motion.a} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} variant={mobile ? "h5" : "body1"} href={href} onClick={handleClick} style={navItem} {...props}>
+      <Typography
+        component={motion.a}
+        layoutId="page_title"
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        variant={mobile ? "h5" : "body1"}
+        href={href}
+        onClick={handleClick}
+        style={navItem}
+        {...props}>
         {children}
       </Typography>
     )
+  } else {
+    return <></>
   }
 }
 

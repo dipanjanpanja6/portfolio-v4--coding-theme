@@ -1,0 +1,22 @@
+{
+  "work": [
+    {
+      "name": "RoomLelo",
+      "link": "https://roomlelo.in",
+      "year": 2020,
+      "desc": "RoomLelo is a new home rental platform with ease without brokerage student accommodation platform based in Varanasi, IN. I lead and development this project and deploy into AWS. The tech stack consisted of React, Node, PostgreSQL."
+    },
+    {
+      "name": "RGB LED Remote",
+      "link": "https://play.google.com/store/apps/details?id=in.dipanjanpanja.rgbledremote",
+      "year": 2021,
+      "desc": "An app which can control RGB LED Strip lights & Bulbs build with Flutter SDK."
+    },
+    {
+      "name": "Live online visitor counter",
+      "link": "https://github.com/dipanjanpanja6/online-visitor-counter",
+      "year": 2020,
+      "desc": "Server less real-time online visitors counter with firebase Realtime database you can implement in any JavaScript based frontend/html/react js/angular js."
+    }
+  ]
+}

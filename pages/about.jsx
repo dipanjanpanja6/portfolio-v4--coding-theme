@@ -3,13 +3,16 @@ import { AssignmentReturned, GitHub, LinkedIn } from "@material-ui/icons"
 import React from "react"
 import Link from "../components/link"
 import clsx from "clsx"
+import { motion } from "framer-motion"
+import { useGlobalStyle } from "../styles/global"
 
 export default function About() {
   const classes = useStyles()
+   const globalClasses = useGlobalStyle()
   return (
     <div className={classes.root}>
       <Grid className={classes.container}>
-        <Typography variant="h2" component="h1" style={{ fontWeight: "bold" }}>
+        <Typography variant="h2" component={motion.h1} initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className={globalClasses.header}>
           about()
         </Typography>
         <Grid item className={classes.item}>

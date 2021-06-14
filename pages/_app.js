@@ -9,6 +9,9 @@ import PrimaryAppBar from "../components/appbar"
 import Seo from "../components/seo"
 import Line from "../components/line"
 import Layout from "../components/layout"
+import { AnimatePresence, AnimateSharedLayout } from "framer-motion"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 const Loader = () => (
   <div className="loader">
@@ -37,12 +40,13 @@ const Loader = () => (
 )
 const TIMEOUT = 400
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   useEffect(() => {
     const jssStyles = document.querySelector("#jss-server-side")
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles)
     }
+    Aos.init()
   }, [])
   const getLayout = Component.getLayout || (children => <Layout>{children}</Layout>)
 
@@ -55,17 +59,27 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <PrimaryAppBar />
-        <PageTransition
+        {/* <PageTransition
           timeout={TIMEOUT}
           classNames="page-transition"
           loadingComponent={<Loader />}
           loadingDelay={400}
           loadingTimeout={{ enter: TIMEOUT, exit: 0 }}
-          loadingClassNames="loading-indicator">
-          {getLayout(<Component {...pageProps} />)}
-        </PageTransition>
+          loadingClassNames="loading-indicator"> */}
+        <AnimatePresence initial={false} exitBeforeEnter>
+          <AnimateSharedLayout>{getLayout(<Component {...pageProps} />)}</AnimateSharedLayout>
+        </AnimatePresence>
+        <footer>
+          <marquee variant="extended" color="secondary" onClick={() => window.scrollTo(0, 0)}>
+            <div style={{ display: "flex", flexWrap: "nowrap", justifyContent: "space-around", flexDirection: "row" }}>
+              <p>⇈ Back to the top ⇈</p>
+              <p>You have reached the end!</p>
+            </div>
+          </marquee>
+        </footer>
+        {/* </PageTransition> */}
       </ThemeProvider>
-      <style jsx global>{`
+      {/* <style jsx global>{`
         .page-transition-enter {
           opacity: 0;
           transform: translate3d(0, 20px, 0);
@@ -92,6 +106,7 @@ function MyApp({ Component, pageProps }) {
           transition: opacity ${TIMEOUT}ms;
         }
       `}</style>
+     */}
     </>
   )
 }
