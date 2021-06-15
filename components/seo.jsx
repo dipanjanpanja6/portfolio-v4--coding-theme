@@ -16,7 +16,7 @@ const Seo = ({ title = ``, description = ``, pathname = ``, image = ``, children
       <title>{title ? `${title} | ${siteTitle}` : defaultTitle}</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
-      <meta name="keywords" content="Geogo, Blog, Course, Event, Scout, ScoutLive, Class" />
+      <meta name="keywords" content="Portfolio, work, dipanjan, panja, resume, cv, about" />
 
       <meta property="og:title" content={seo.title} />
       <meta property="og:url" content={seo.url} />
@@ -34,14 +34,12 @@ const Seo = ({ title = ``, description = ``, pathname = ``, image = ``, children
       <meta name="twitter:creator" content={author} />
 
       <meta name="Owner" content={author} />
-      <meta name="Copyright" content="Geogo Techsolutions Pvt Ltd."></meta>
-      <meta name="classification" content="Education"></meta>
+      <meta name="Copyright" content={author}></meta>
+      <meta name="classification" content="Portfolio"></meta>
       <meta name="distribution" content="India"></meta>
       <meta name="rating" content="General"></meta>
       <meta name="audience" content="All" />
-      <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-      <meta name="theme-color" content="#ffffff"></meta>
+      <meta name="theme-color" content="#00b0ff"></meta>
       {children}
     </Head>
   )

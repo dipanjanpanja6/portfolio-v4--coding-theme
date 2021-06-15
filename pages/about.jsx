@@ -5,165 +5,185 @@ import Link from "../components/link"
 import clsx from "clsx"
 import { motion } from "framer-motion"
 import { useGlobalStyle } from "../styles/global"
+import Seo from "../components/seo"
 
 export default function About() {
   const classes = useStyles()
-   const globalClasses = useGlobalStyle()
+  const globalClasses = useGlobalStyle()
   return (
-    <div className={classes.root}>
-      <Grid className={classes.container}>
-        <Typography variant="h2" component={motion.h1} initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className={globalClasses.header}>
-          about()
-        </Typography>
-        <Grid item className={classes.item}>
-          <div>
-            <IconButton>
-              <LinkedIn />
-            </IconButton>
-          </div>
-          <div>
-            <IconButton>
-              <GitHub />
-            </IconButton>
-          </div>
-          <div>
-            Download my
-            <Button component={Link} href="/" className={classes.button} variant="contained" color="secondary" endIcon={<AssignmentReturned />}>
-              Resume
-            </Button>
-          </div>
+    <>
+      <Seo title=".about()" />
+
+      <div className={classes.root}>
+        <Grid className={classes.container}>
+          <Typography variant="h2" component={motion.h1} initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className={globalClasses.header}>
+            about()
+          </Typography>
+          <Grid item className={classes.item}>
+            <div>
+              <IconButton>
+                <LinkedIn />
+              </IconButton>
+            </div>
+            <div>
+              <IconButton>
+                <GitHub />
+              </IconButton>
+            </div>
+            <div>
+              Download my
+              <Button
+                component={Link}
+                href="https://firebasestorage.googleapis.com/v0/b/iam-dipanjan.appspot.com/o/dipanjan%20panja%20resume.pdf?alt=media&token=cee19ef5-da35-4baa-9429-d48c64feb507"
+                className={classes.button}
+                variant="contained"
+                color="secondary"
+                endIcon={<AssignmentReturned />}>
+                Resume
+              </Button>
+              <Button
+                component={Link}
+                href="https://firebasestorage.googleapis.com/v0/b/iam-dipanjan.appspot.com/o/Dipanjan%20Panja.pdf?alt=media&token=fc140e7a-1195-43b0-8358-72a5625c4d47"
+                className={classes.button}
+                variant="contained"
+                color="secondary"
+                endIcon={<AssignmentReturned />}>
+                CV
+              </Button>
+            </div>
+          </Grid>
+          <Typography color="secondary" style={{ paddingBottom: 12 }}>
+            I am a fullstack developer. From India,
+            <br />
+            based in Kolkata.
+          </Typography>
+          <Typography color="textSecondary">// +2 years of experience</Typography>
+          <Grid className={classes.grid}>
+            <Typography variant="h6" className={classes.subtitle}>
+              Main skills
+            </Typography>
+            <Grid className={classes.columns}>
+              <ul className={classes.list}>
+                <li>
+                  Backend development,
+                  <br />
+                  Frontend development,
+                  <br /> UX/UI design
+                </li>
+                <li>
+                  JavaScript, CSS, HTML
+                  <br /> React, React Native
+                </li>
+
+                <li>
+                  E-commerce,
+                  <br /> WordPress
+                </li>
+                <li>
+                  Strategic thinking,
+                  <br /> Quick lerner
+                </li>
+                <li>
+                  Photoshop,
+                  <br /> Illustrator
+                </li>
+              </ul>
+            </Grid>
+
+            <Typography variant="h6" className={classes.subtitle}>
+              Tools/years
+            </Typography>
+            <Grid className={clsx(classes.list, classes.columns)}>
+              <ul>
+                <li>JavaScript/+2</li>
+                <li>Typescript/~1</li>
+                <li> CSS/+2</li>
+                <li> HTML/+2 </li>
+              </ul>
+
+              <ul>
+                <li>Next.js/+1</li>
+                <li>React/+2</li>
+                <li>React Native/+2</li>
+                <li>Node.js/+2</li>
+                <li>Flutter/~1</li>
+              </ul>
+              <ul>
+                <li>GraphQL/~1</li>
+                <li>jQuery/+1</li>
+                <li>WebScoket/~2</li>
+              </ul>
+              <ul>
+                <li>WordPress/~1</li>
+              </ul>
+            </Grid>
+            <Typography variant="h6" className={classes.subtitle}>
+              Experience
+            </Typography>
+            <Grid className={clsx(classes.list, classes.columns, classes.exp)}>
+              <ul>
+                <li>Associate Member Of Technical Staff</li>
+                <li> @ GEOGO Techsolutions</li>
+                <li> 2021 - now </li>
+              </ul>
+
+              <ul>
+                <li>Software Engineer</li>
+                <li>@ Freelancer</li>
+                <li> 2021 </li>
+              </ul>
+              <ul>
+                <li>Head Of the Technology</li>
+                <li>@ RoomLelo</li>
+                <li>2020 - 2021</li>
+              </ul>
+              <ul>
+                <li>Full Stack Engineer</li>
+                <li>QrioctyBox</li>
+                <li> 2020</li>
+              </ul>
+            </Grid>
+            <Typography variant="h6" className={classes.subtitle}>
+              Languages
+            </Typography>
+            <Grid className={clsx(classes.list, classes.columns, classes.lang)}>
+              <ul>
+                <li>// fluent</li>
+                <li>
+                  <span>hi</span> Hindi
+                </li>
+                <li>
+                  <span>bn</span> Bengali
+                </li>
+              </ul>
+              <ul>
+                <li>// intermediate</li>
+                <li>
+                  <span>en-IN</span> English
+                </li>
+              </ul>
+              <ul>
+                <li>// basic</li>
+              </ul>
+            </Grid>
+            <Typography variant="h6" className={classes.subtitle}>
+              Also busy with
+            </Typography>
+            <Grid className={clsx(classes.list, classes.columns)}>
+              <ul>
+                <li>DMX Protocol</li>
+              </ul>
+              <ul>
+                <li>Penetration testing</li>
+              </ul>
+              <ul>
+                <li>Video games</li>
+              </ul>
+            </Grid>
+          </Grid>
         </Grid>
-        <Typography color="secondary" style={{ paddingBottom: 12 }}>
-          I am a fullstack developer. From India,
-          <br />
-          based in Kolkata.
-        </Typography>
-        <Typography color="textSecondary">// +2 years of experience</Typography>
-        <Grid className={classes.grid}>
-          <Typography variant="h6" className={classes.subtitle}>
-            Main skills
-          </Typography>
-          <Grid className={classes.columns}>
-            <ul className={classes.list}>
-              <li>
-                Backend development,
-                <br />
-                Frontend development,
-                <br /> UX/UI design
-              </li>
-              <li>
-                JavaScript, CSS, HTML
-                <br /> React, React Native
-              </li>
-
-              <li>
-                E-commerce,
-                <br /> WordPress
-              </li>
-              <li>
-                Strategic thinking,
-                <br /> Quick lerner
-              </li>
-              <li>
-                Photoshop,
-                <br /> Illustrator
-              </li>
-            </ul>
-          </Grid>
-
-          <Typography variant="h6" className={classes.subtitle}>
-            Tools/years
-          </Typography>
-          <Grid className={clsx(classes.list, classes.columns)}>
-            <ul>
-              <li>JavaScript/+2</li>
-              <li>Typescript/~1</li>
-              <li> CSS/+2</li>
-              <li> HTML/+2 </li>
-            </ul>
-
-            <ul>
-              <li>Next.js/+1</li>
-              <li>React/+2</li>
-              <li>React Native/+2</li>
-              <li>Node.js/+2</li>
-              <li>Flutter/~1</li>
-            </ul>
-            <ul>
-              <li>GraphQL/~1</li>
-              <li>jQuery/+1</li>
-              <li>WebScoket/~2</li>
-            </ul>
-            <ul>
-              <li>WordPress/~1</li>
-            </ul>
-          </Grid>
-          <Typography variant="h6" className={classes.subtitle}>
-            Experience
-          </Typography>
-          <Grid className={clsx(classes.list, classes.columns, classes.exp)}>
-            <ul>
-              <li>Associate Member Of Technical Staff</li>
-              <li> @ GEOGO Techsolutions</li>
-              <li> 2021 - now </li>
-            </ul>
-
-            <ul>
-              <li>Software Engineer</li>
-              <li>@ Freelancer</li>
-              <li> 2021 </li>
-            </ul>
-            <ul>
-              <li>Head Of the Technology</li>
-              <li>@ RoomLelo</li>
-              <li>2020 - 2021</li>
-            </ul>
-            <ul>
-              <li>Full Stack Engineer</li>
-              <li>QrioctyBox</li>
-              <li> 2020</li>
-            </ul>
-          </Grid>
-          <Typography variant="h6" className={classes.subtitle}>
-            Languages
-          </Typography>
-          <Grid className={clsx(classes.list, classes.columns, classes.lang)}>
-            <ul>
-              <li>// fluent</li>
-              <li>
-                <span>hi</span> Hindi
-              </li>
-              <li>
-                <span>bn</span> Bengali
-              </li>
-            </ul>
-            <ul>
-              <li>// intermediate</li>
-              <li>
-                <span>en-IN</span> English
-              </li>
-            </ul>
-            <ul>
-              <li>// basic</li>
-            </ul>
-          </Grid>
-          <Typography variant="h6" className={classes.subtitle}>
-            Also busy with
-          </Typography>
-          <Grid className={clsx(classes.list, classes.columns)}>
-            <ul>
-              <li>DMX Protocol</li>
-            </ul>
-            <ul>
-              <li>Penetration testing</li>
-            </ul>
-            <ul>
-              <li>Video games</li>
-            </ul>
-          </Grid>
-        </Grid>
-      </Grid>
-    </div>
+      </div>
+    </>
   )
 }
 const useStyles = makeStyles(theme => ({

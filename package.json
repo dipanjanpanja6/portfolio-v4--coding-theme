@@ -1,14 +1,15 @@
 {
   "name": "portfolio-v4",
   "version": "0.1.0",
-  "license": "",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "static": "next build && next export"
+    "static": "next build && next-sitemap --config next-sitemap.config.js && next export"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
@@ -17,15 +18,14 @@
     "framer-motion": "^4.1.17",
     "next": "10.2.3",
     "next-page-transitions": "^1.0.0-beta.2",
+    "next-pwa": "^5.2.21",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-intersection-observer": "^8.32.0",
     "scrollmagic": "^2.0.8"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.6",
-    "postcss": "^8.3.2",
-    "prettier": "^2.3.1",
-    "tailwindcss": "^2.1.4"
+    "next-sitemap": "^1.6.116",
+    "prettier": "^2.3.1"
   }
 }

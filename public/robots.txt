@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://dipanjanpanja.in
+
+# Sitemaps
+Sitemap: https://dipanjanpanja.in/sitemap.xml

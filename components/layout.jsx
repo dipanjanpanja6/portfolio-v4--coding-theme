@@ -60,7 +60,7 @@ const styles = makeStyles(theme => ({
     },
   },
   main: {
-    overflowX:'hidden',
+    overflowX: "hidden",
     "&::after": {
       content: copyright,
       position: "fixed",
