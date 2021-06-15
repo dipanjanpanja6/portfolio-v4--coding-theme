@@ -25,10 +25,10 @@ function Intro() {
         dipanjan
         <span>.init()</span>
       </Typography>
-      <Typography variant="h6" color="secondary" className={globalClasses.subtitle}>
+      <Typography variant="h6" component="h1" color="secondary" className={globalClasses.subtitle}>
         Dipanjan Panja
       </Typography>
-      <Typography variant="h6" className={globalClasses.subtitle}>
+      <Typography variant="h6" component="h2" className={globalClasses.subtitle}>
         A fullstack developer, based
         <br /> in India.
       </Typography>

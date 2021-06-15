@@ -2,13 +2,14 @@
   "hosting": {
     "public": "out",
     "site": "dipanjan",
-    "appAssociation": "AUTO",
+    "cleanUrls": true,
     "rewrites": [
       {
         "source": "/d/**",
         "dynamicLinks": true
       }
     ],
+    "appAssociation": "AUTO",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }

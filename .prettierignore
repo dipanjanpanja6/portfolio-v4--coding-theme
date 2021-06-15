@@ -1,7 +1,7 @@
 # Ignore artifacts:
 .next
 node_modules
-public
+# public
 out
 
 # Ignore all HTML files:

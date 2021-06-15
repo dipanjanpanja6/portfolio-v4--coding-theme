@@ -62,7 +62,7 @@ function Cv() {
       <div className={classes.gap} />
       <Grid>
         <motion.div variants={variants1} animate={isVisible & "visible"} transition={{ duration: 0.5, ease: "easeOut" }}>
-          <Typography color="textSecondary" variant="h6" style={{ paddingBottom: "1rem", maxWidth: "500px" }} gutterBottom>
+          <Typography color="textSecondary" variant="h6" component="p" style={{ paddingBottom: "1rem", maxWidth: "500px" }} gutterBottom>
             Hello!
             <br />
             <br />
