@@ -22,7 +22,7 @@ function MadeWith() {
   }
   return (
     <>
-      <Typography color="textSecondary" variant="h6" style={{ paddingBottom: "1rem" }}>
+      <Typography color="textSecondary" variant="h6" component="p" style={{ paddingBottom: "1rem" }}>
         // Made with
       </Typography>
       <Grid className={classes.grid}>
@@ -53,11 +53,11 @@ function MadeWith() {
         </Grid>
       </Grid>
       <div className={classes.gap} />
-      <Typography variant="h6" style={{ paddingBottom: "1rem" }}>
+      <Typography variant="h6" component="p" style={{ paddingBottom: "1rem" }}>
         Thanks for checking my website!
       </Typography>
       <motion.div ref={ref} variants={variants} animate={isVisible ? "visible" : "hidden"} transition={{ duration: 0.5, ease: "easeOut" }}>
-        <Typography color="textSecondary" variant="h6" style={{ paddingBottom: "1rem" }} gutterBottom>
+        <Typography color="textSecondary" variant="h6" component="p" style={{ paddingBottom: "1rem" }} gutterBottom>
           // It's a work in progress so check back often!
         </Typography>
       </motion.div>

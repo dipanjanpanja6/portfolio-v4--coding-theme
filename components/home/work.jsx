@@ -15,7 +15,7 @@ function Cv() {
         work(
         <span>'/.*$/g'</span>)
       </Typography>
-      <Typography color="textSecondary" variant="h6" style={{ paddingBottom: "1rem" }} gutterBottom data-aos="fade-left">
+      <Typography color="textSecondary" variant="h6" component="p" style={{ paddingBottom: "1rem" }} gutterBottom data-aos="fade-left">
         {"// <Some special projects showcase/>"}
       </Typography>
       <div className={classes.gap} />

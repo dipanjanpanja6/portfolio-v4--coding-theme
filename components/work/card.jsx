@@ -9,7 +9,7 @@ function WorkCard({ name, link, ...props }) {
     <>
       <Grid container alignItems="center" justify="flex-end" spacing={2} component="article" className={classes.root}>
         <Grid item sm={12} md={6}>
-          <Typography component={Link} href={link} target="_blank" variant="h6" gutterBottom className={classes.title}>
+          <Typography component={Link} href={link} target="_blank" rel="noreferrer" variant="h6" component="h2" gutterBottom className={classes.title}>
             {name}
           </Typography>
 

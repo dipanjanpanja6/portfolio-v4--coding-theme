@@ -20,6 +20,7 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
           <link rel="shortcut icon" href="/icons/favicon.png" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <script type="text/javascript" src="/sw.js" />
           <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,500,700,700i|Montserrat:700&display=swap" rel="stylesheet"></link>
         </Head>
         <body>
