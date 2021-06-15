@@ -1,14 +1,15 @@
 {
   "name": "portfolio-v4",
   "version": "0.1.0",
-  "license": "",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "static": "next build && next export"
+    "static": "next build && next-sitemap --config next-sitemap.config.js && next export"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",

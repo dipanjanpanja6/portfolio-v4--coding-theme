@@ -1,5 +1,5 @@
 module.exports = {
   siteUrl: "https://dipanjanpanja.in",
-  //   generateRobotsTxt: true,
+  generateRobotsTxt: true,
   // ...other options
 }
