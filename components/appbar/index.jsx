@@ -11,6 +11,17 @@ function Appbar() {
   const classes = useStyles()
   const [nav, setNav] = useState(false)
   const handleNav = () => setNav(!nav)
+  const social = (
+    <>
+      <IconButton name="LinkedIn" component={Link} rel="noreferrer" target="_blank" href="https://linkedin.com/in/dipanjanpanja6">
+        <LinkedIn />
+      </IconButton>
+
+      <IconButton name="Github" component={Link} rel="noreferrer" target="_blank" href="https://github.com/dipanjanpanja6">
+        <GitHub />
+      </IconButton>
+    </>
+  )
   return (
     <>
       <AppBar className={classes.root} color="transparent">
@@ -25,14 +36,7 @@ function Appbar() {
               <ActiveLink href="/work">.work()</ActiveLink>
               <ActiveLink href="/about">.about()</ActiveLink>
               <ActiveLink href="/contact">.contact()</ActiveLink>
-
-              <IconButton component={Link} target="_blank" href="https://linkedin.com/in/dipanjanpanja6">
-                <LinkedIn />
-              </IconButton>
-
-              <IconButton component={Link} target="_blank" href="https://github.com/dipanjanpanja6">
-                <GitHub />
-              </IconButton>
+              {social}
             </Grid>
             <Grid className={classes.mobileNav}>
               <IconButton onClick={handleNav}>
@@ -62,15 +66,7 @@ function Appbar() {
                   <ActiveLink mobile href="/contact">
                     .contact()
                   </ActiveLink>
-                  <div>
-                    <IconButton component={Link} target="_blank" href="https://linkedin.com/in/dipanjanpanja6">
-                      <LinkedIn />
-                    </IconButton>
-
-                    <IconButton component={Link} target="_blank" href="https://github.com/dipanjanpanja6">
-                      <GitHub />
-                    </IconButton>
-                  </div>
+                  <div>{social}</div>
                 </DialogContent>
               </Dialog>
             </Grid>
