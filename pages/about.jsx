@@ -32,8 +32,23 @@ export default function About() {
             </div>
             <div>
               Download my
-              <Button component={Link} href="/" className={classes.button} variant="contained" color="secondary" endIcon={<AssignmentReturned />}>
+              <Button
+                component={Link}
+                href="https://firebasestorage.googleapis.com/v0/b/iam-dipanjan.appspot.com/o/dipanjan%20panja%20resume.pdf?alt=media&token=cee19ef5-da35-4baa-9429-d48c64feb507"
+                className={classes.button}
+                variant="contained"
+                color="secondary"
+                endIcon={<AssignmentReturned />}>
                 Resume
+              </Button>
+              <Button
+                component={Link}
+                href="https://firebasestorage.googleapis.com/v0/b/iam-dipanjan.appspot.com/o/Dipanjan%20Panja.pdf?alt=media&token=fc140e7a-1195-43b0-8358-72a5625c4d47"
+                className={classes.button}
+                variant="contained"
+                color="secondary"
+                endIcon={<AssignmentReturned />}>
+                CV
               </Button>
             </div>
           </Grid>

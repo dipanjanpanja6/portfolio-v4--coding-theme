@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
           <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
           <link rel="manifest" href="/manifest.json" />
           <link rel="shortcut icon" href="/icons/favicon.png" />
-          {/* <link rel="preconnect" href="https://fonts.gstatic.com" /> */}
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,500,700,700i|Montserrat:700&display=swap" rel="stylesheet"></link>
         </Head>
         <body>
