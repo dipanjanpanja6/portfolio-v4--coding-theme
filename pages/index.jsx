@@ -6,6 +6,7 @@ import Intro from "../components/home/intro"
 import MadeWith from "../components/home/madeWith"
 import { getLayout } from "../components/layout"
 import { useGlobalStyle } from "../styles/global"
+import Seo from "../components/seo"
 
 const Home = props => {
   const classes = useStyles()
@@ -13,6 +14,7 @@ const Home = props => {
 
   return (
     <>
+      <Seo />
       <div
         key="index"
         initial={{ opacity: 0, x: -1000 }}

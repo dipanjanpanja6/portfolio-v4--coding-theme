@@ -5,6 +5,7 @@ import { useGlobalStyle } from "../styles/global"
 import { Button, Grid, Typography, makeStyles, TextField, Card, CardContent, CardActions, CircularProgress } from "@material-ui/core"
 import Link from "next/link"
 import { Close, Send } from "@material-ui/icons"
+import Seo from "../components/seo"
 
 function Contact() {
   const classes = useStyles()
@@ -43,6 +44,8 @@ function Contact() {
   }
   return (
     <>
+      <Seo title=".contact()" />
+
       <section>
         <div className={globalClasses.container}>
           <Typography variant="h2" className={globalClasses.header} component={motion.h1} initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}>

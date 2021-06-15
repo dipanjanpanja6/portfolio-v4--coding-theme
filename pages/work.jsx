@@ -5,6 +5,7 @@ import { useGlobalStyle } from "../styles/global"
 import { motion } from "framer-motion"
 import WorkCard from "../components/work/card"
 import data from "../lib/data.json"
+import Seo from "../components/seo"
 
 function Work() {
   const classes = useStyles()
@@ -14,6 +15,7 @@ function Work() {
 
   return (
     <>
+      <Seo title=".work()" />
       <section>
         <div className={globalClasses.container}>
           <Typography variant="h2" className={globalClasses.header} component={motion.h1} layoutId="selected_work" initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}>
