@@ -44,10 +44,10 @@ function MadeWith() {
               <br />
             </li>
 
-            <li>72 files </li>
-            <li>~1MB</li>
+            <li>64 files </li>
+            <li>~1.4MB</li>
             <li>+100h of thinking</li>
-            <li>+70 hours of code</li>
+            <li>+74 hours of code</li>
             <li>10+ cups of coffee</li>
           </ul>
         </Grid>
