@@ -6,6 +6,7 @@ import clsx from "clsx"
 import { motion } from "framer-motion"
 import { useGlobalStyle } from "../styles/global"
 import Seo from "../components/seo"
+import { userProperties } from "../lib/firebase"
 
 export default function About() {
   const classes = useStyles()
@@ -40,6 +41,7 @@ export default function About() {
                 className={classes.button}
                 variant="contained"
                 color="secondary"
+                onClick={() => userProperties({ resume_download: true })}
                 endIcon={<AssignmentReturned />}>
                 Resume
               </Button>
@@ -51,6 +53,7 @@ export default function About() {
                 className={classes.button}
                 variant="contained"
                 color="secondary"
+                onClick={() => userProperties({ cv_download: true })}
                 endIcon={<AssignmentReturned />}>
                 CV
               </Button>

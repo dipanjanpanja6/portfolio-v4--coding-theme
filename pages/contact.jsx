@@ -6,6 +6,7 @@ import { Button, Grid, Typography, makeStyles, TextField, Card, CardContent, Car
 import Link from "next/link"
 import { Close, Send } from "@material-ui/icons"
 import Seo from "../components/seo"
+import { logEvents, userProperties } from "../lib/firebase"
 
 function Contact() {
   const classes = useStyles()
@@ -16,10 +17,13 @@ function Contact() {
   const [loading, setLoading] = useState(false)
 
   const handleSubmit = event => {
+    logEvents({}, "send_nsg")
+    userProperties({ send_msg: true })
     event.preventDefault()
     set()
     setLoading(true)
     var data = new FormData(event.target)
+
     fetch("https://formspree.io/f/xzbyggkj", {
       method: "POST",
       body: data,
@@ -29,7 +33,6 @@ function Contact() {
     })
       .then(response => {
         setLoading(false)
-        console.log({ response })
         // form.reset()
         set("Thanks for your submission!")
       })

@@ -8,6 +8,7 @@ import Seo from "../components/seo"
 import Layout from "../components/layout"
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion"
 import Aos from "aos"
+import { logEvents } from "../lib/firebase"
 import "aos/dist/aos.css"
 
 function MyApp({ Component, pageProps, router }) {
@@ -17,6 +18,17 @@ function MyApp({ Component, pageProps, router }) {
       jssStyles.parentElement.removeChild(jssStyles)
     }
     Aos.init()
+
+    if (process.env.NODE_ENV === "production") {
+      router.events.on("routeChangeComplete", data => logEvents(data))
+      //For First Page
+      logEvents({ url: router.pathname, direct_visit: true })
+
+      //Remvove Event Listener after un-mount
+      return () => {
+        router.events.off("routeChangeComplete", data => logEvents(data))
+      }
+    }
   }, [])
   const getLayout = Component.getLayout || (children => <Layout>{children}</Layout>)
 

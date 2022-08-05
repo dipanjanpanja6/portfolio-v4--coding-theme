@@ -3,7 +3,7 @@ import { Close, GitHub, LinkedIn, MoreVert } from "@material-ui/icons"
 import React, { useState, forwardRef } from "react"
 import ActiveLink from "./activeLink"
 import Link from "../link"
-
+import { logEvents, userProperties } from "../../lib/firebase"
 const TransitionLeft = forwardRef(function Transition(props, ref) {
   return <Slide direction="left" ref={ref} {...props} />
 })
@@ -11,13 +11,17 @@ function Appbar() {
   const classes = useStyles()
   const [nav, setNav] = useState(false)
   const handleNav = () => setNav(!nav)
+  const logger = event => () => {
+    logEvents({}, event)
+    userProperties({ [event]: true })
+  }
   const social = (
     <>
-      <IconButton name="LinkedIn" component={Link} rel="noreferrer" target="_blank" href="https://linkedin.com/in/dipanjanpanja6">
+      <IconButton name="LinkedIn" component={Link} rel="noreferrer" target="_blank" href="https://linkedin.com/in/dipanjanpanja6" onClick={logger("visit_linkedin")}>
         <LinkedIn />
       </IconButton>
 
-      <IconButton name="Github" component={Link} rel="noreferrer" target="_blank" href="https://github.com/dipanjanpanja6">
+      <IconButton name="Github" component={Link} rel="noreferrer" target="_blank" href="https://github.com/dipanjanpanja6" onClick={logger("visit_linkedin")}>
         <GitHub />
       </IconButton>
     </>

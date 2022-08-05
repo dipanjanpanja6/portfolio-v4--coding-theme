@@ -16,7 +16,6 @@ function ActiveLink({ children, href, header, mobile, ...props }) {
     e.preventDefault()
     router.push(href)
   }
-
   if (header) {
     return (
       <Typography
@@ -26,7 +25,7 @@ function ActiveLink({ children, href, header, mobile, ...props }) {
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         /*onClick={() => router.push("/")}*/ style={{ color: "#69e2ff", fontWeight: "400" }}>
-        {router.asPath.substr(1) == "" ? ".init()" : `.${router.asPath.substr(1)}()`}
+        {router.pathname.substring(1) == "" ? ".init()" : `.${router.pathname.substring(1)}()`}
       </Typography>
     )
   } else if (router.asPath !== href) {
