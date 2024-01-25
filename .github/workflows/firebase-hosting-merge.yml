@@ -25,3 +25,4 @@ jobs:
           projectId: iam-dipanjan
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
+          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
