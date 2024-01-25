@@ -26,3 +26,4 @@ jobs:
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
           ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+          NODE_OPTIONS: "--openssl-legacy-provider"
